@@ -1,7 +1,8 @@
 //A class storing all of the ingredients and directions for the recipe. Including Recipe Name, Cook Time, Serving Size, Ingredents, & Directions
 class createRecipe {
-    constructor(recipeName, cookTime, servingSize){
+    constructor(recipeName, recipeAuthor, cookTime, servingSize){
         this.recipeName = recipeName;
+        this.recipeAuthor = recipeAuthor;
         this.cookTime = cookTime;
         this.servingSize = servingSize;
         this.ingredientsArr = [];
