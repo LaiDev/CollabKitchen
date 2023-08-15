@@ -34,3 +34,33 @@ let testRecipe = new createRecipe("Chocolate Chip Cookies", "11 mins",
 testRecipe.addDirections("Step One: Crack the eggs");
 testRecipe.addDirections("Step Two: Whisk liqued ingredients into the bowl");
 console.log(testRecipe)
+
+//Listens for when adding an ingredient, and displays it in the form
+const ingredientField = document.getElementById("ingredients");
+const ingredientBtn = document.getElementById("addIngredientBtn");
+const ingredientList = document.getElementById("ingredentList");
+
+ingredientBtn.addEventListener("click", () => {
+    event.preventDefault();
+    console.log(ingredientField.value);
+
+    const ingredient = document.createElement("li");
+    ingredient.innerHTML = ingredientField.value;
+    ingredientList.append(ingredient);
+    ingredientField.value = "";
+})
+
+//Listens for when adding a step, and displays it in the form
+const directionField = document.getElementById("directions");
+const directionBtn = document.getElementById("addDirectionsBtn");
+const directionList = document.getElementById("directionsList");
+
+directionBtn.addEventListener("click", () => {
+    event.preventDefault();
+    console.log(directionField.value);
+
+    const direction = document.createElement("li");
+    direction.innerHTML = directionField.value;
+    directionList.append(direction);
+    directionField.value = "";
+})
