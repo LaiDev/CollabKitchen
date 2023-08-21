@@ -11,13 +11,6 @@ class createRecipe {
 
 }
 
-//Testing Recipe and methods
-let testRecipe = new createRecipe("Chocolate Chip Cookies", "11 mins", 
-'8')
-//testRecipe.addDirections("Step One: Crack the eggs");
-//testRecipe.addDirections("Step Two: Whisk liqued ingredients into the bowl");
-console.log(testRecipe)
-
 //Listens for when adding an ingredient, and displays it in the form
 const ingredientField = document.getElementById("ingredients");
 const ingredientBtn = document.getElementById("addIngredientBtn");
@@ -118,11 +111,20 @@ createRecipeBtn.addEventListener("click", () => {
     let recipe = new createRecipe(recipeName.value,recipeAuthor.value,cookTime.value,servingSize.value, ingredientArr, directionArr);
     //console.log(recipe)
     addToLocalStorage(recipe)
-    displayRecipeSample(recipe.recipeName,recipe.recipeAuthor, recipe);
+    //displayRecipeSample(recipe.recipeName,recipe.recipeAuthor, recipe);
 
 })
 
 
 //Retrieve recipe From Local Storage and Display on DOM
+
+const loadFromStorage = () => {
+   Object.keys(localStorage).forEach((key) => {
+    let recipe = JSON.parse(localStorage.getItem(key));
+    displayRecipeSample(recipe.recipeName, recipe.recipeAuthor, recipe);
+   })
+}
+
+loadFromStorage()
 
 //ADD Implementation to see full recipe
