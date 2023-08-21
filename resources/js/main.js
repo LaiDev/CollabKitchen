@@ -89,6 +89,20 @@ const displayRecipeSample = (recipeName, recipeAuthor, recipe ) => {
 
 }
 
+const generateId = () => {
+   let id = Math.floor(Math.random() * 100000);
+   return id;
+}
+
+
+//ADD recipe To Local Storage
+
+const addToLocalStorage = (recipeToAdd) => {
+    localStorage.setItem(`recipe${generateId()}.`, JSON.stringify(recipeToAdd));
+    console.log(localStorage);
+}
+
+
 const recipeName = document.getElementById("recipeName");
 const recipeAuthor = document.getElementById("recipeAuthor")
 const cookTime = document.getElementById("cookTime");
@@ -104,11 +118,11 @@ createRecipeBtn.addEventListener("click", () => {
     console.log(servingSize.value);
     let recipe = new createRecipe(recipeName.value,recipeAuthor.value,cookTime.value,servingSize.value, ingredientArr, directionArr);
     //console.log(recipe)
+    addToLocalStorage(recipe)
     displayRecipeSample(recipe.recipeName,recipe.recipeAuthor, recipe);
 
 })
 
-//ADD recipe To Local Storage
 
 //Retrieve recipe From Local Storage and Display on DOM
 
