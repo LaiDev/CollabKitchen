@@ -108,3 +108,8 @@ createRecipeBtn.addEventListener("click", () => {
 
 })
 
+//ADD recipe To Local Storage
+
+//Retrieve recipe From Local Storage and Display on DOM
+
+//ADD Implementation to see full recipe
