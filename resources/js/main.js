@@ -58,7 +58,7 @@ directionBtn.addEventListener("click", () => {
 
 //Display Recipes
 
-const displayRecipeSample = (recipeName, recipeAuthor, ) => {
+const displayRecipeSample = (recipeName, recipeAuthor, recipe ) => {
     const container = document.createElement("div");
     container.classList.add("recipeContainer")
     document.body.append(container)
@@ -77,6 +77,16 @@ const displayRecipeSample = (recipeName, recipeAuthor, ) => {
     sampleRecipeAuthor.classList.add("sampleRecipeAuthor");
     container.append(sampleRecipeAuthor);
 
+    const seeRecipeBtn = document.createElement("button");
+    seeRecipeBtn.innerHTML = "See Recipe"
+    seeRecipeBtn.classList.add("seeRecipeBtn");
+    container.append(seeRecipeBtn);
+
+    //Displays full recipe info when clicking the specific button
+    seeRecipeBtn.addEventListener("click", () => {
+        console.log(recipe);
+    })
+
 }
 
 const recipeName = document.getElementById("recipeName");
@@ -93,8 +103,8 @@ createRecipeBtn.addEventListener("click", () => {
     console.log(cookTime.value);
     console.log(servingSize.value);
     let recipe = new createRecipe(recipeName.value,recipeAuthor.value,cookTime.value,servingSize.value, ingredientArr, directionArr);
-    console.log(recipe)
-    displayRecipeSample(recipe.recipeName,recipe.recipeAuthor);
+    //console.log(recipe)
+    displayRecipeSample(recipe.recipeName,recipe.recipeAuthor, recipe);
 
 })
 
