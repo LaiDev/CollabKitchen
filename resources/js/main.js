@@ -98,10 +98,9 @@ const generateId = () => {
 //ADD recipe To Local Storage
 
 const addToLocalStorage = (recipeToAdd) => {
-    localStorage.setItem(`recipe${generateId()}.`, JSON.stringify(recipeToAdd));
+    localStorage.setItem(`recipe${generateId()}`, JSON.stringify(recipeToAdd));
     console.log(localStorage);
 }
-
 
 const recipeName = document.getElementById("recipeName");
 const recipeAuthor = document.getElementById("recipeAuthor")
