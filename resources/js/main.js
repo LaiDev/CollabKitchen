@@ -24,7 +24,7 @@ ingredientBtn.addEventListener("click", () => {
     {
     const ingredient = document.createElement("li");
     ingredient.innerHTML = ingredientField.value;
-    ingredient.classList.add("ingredients");
+    ingredient.classList.add("ingredient-list-item");
     ingredientList.append(ingredient);
     ingredientArr.push(ingredient.innerHTML);
     ingredientField.value = "";
@@ -47,6 +47,7 @@ directionBtn.addEventListener("click", () => {
     {
     const direction = document.createElement("li");
     direction.innerHTML = directionField.value;
+    direction.classList.add("direction-list-item")
     directionList.append(direction);
     directionArr.push(direction.innerHTML);
     directionField.value = "";
@@ -98,7 +99,6 @@ const generateId = () => {
 
 const addToLocalStorage = (recipeToAdd) => {
     localStorage.setItem(`recipe${generateId()}`, JSON.stringify(recipeToAdd));
-    console.log(localStorage);
 }
 
 const recipeName = document.getElementById("recipeName");
@@ -107,53 +107,34 @@ const cookTime = document.getElementById("cookTime");
 const servingSize = document.getElementById("servingSize");
 
 //Gets all the information from the form fields and passes it into the createRecipe class to create a new recipe Object
-const createRecipeBtn = document.getElementById("createRecipe");
 
-if(createRecipeBtn != null){
-createRecipeBtn.addEventListener("click", () => {
+const createRecipeForm = document.getElementById("recipe-creation-form");
+if(createRecipeForm != null){
+
+createRecipeForm.addEventListener("submit", () => {
     event.preventDefault();
-    console.log(recipeName.value);
-    console.log(recipeAuthor.value);
-    console.log(cookTime.value);
-    console.log(servingSize.value);
+
     let recipe = new createRecipe(recipeName.value,recipeAuthor.value,cookTime.value,servingSize.value, ingredientArr, directionArr);
     //console.log(recipe)
     addToLocalStorage(recipe)
     //displayRecipeSample(recipe.recipeName,recipe.recipeAuthor, recipe);
-
+    console.log(recipe)
+    createRecipeForm.reset();
 })
 }
 
+
 //Retrieve recipe From Local Storage and Display on DOM
 
-const loadFromStorage = () => {
+ const loadFromStorage = () => {
    Object.keys(localStorage).forEach((key) => {
     let recipe = JSON.parse(localStorage.getItem(key));
     displayRecipeSample(recipe.recipeName, recipe.recipeAuthor, recipe);
    })
 }
 
-const emptyStorageMessge = document.getElementById("empty-storage-message");
-//If local storage is empty, display "There's nothing here. Otherwise render data from storage"
-const handleHomePageContent = () => {
-    if(localStorage.length != 0)
-    {
-        emptyStorageMessge.style.display = "none";
-        loadFromStorage();
-    }
 
-    UserRecipes.style.display = "none";
-}
-
-const homeCreateBtn = document.getElementById("home-create-btn");
-//Load Recipe Creation Form
-if(homeCreateBtn != null)
-{
-    homeCreateBtn.addEventListener("click", () => {
-        window.location.href = "createRecipe.html";
-    } )
-}
 
 //ADD Implementation to see full recipe
 
-handleHomePageContent();
+export { loadFromStorage };
