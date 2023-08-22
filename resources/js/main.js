@@ -143,9 +143,15 @@ const handleHomePageContent = () => {
     }
 
     UserRecipes.style.display = "none";
+}
 
-
-
+const homeCreateBtn = document.getElementById("home-create-btn");
+//Load Recipe Creation Form
+if(homeCreateBtn != null)
+{
+    homeCreateBtn.addEventListener("click", () => {
+        window.location.href = "index.html";
+    } )
 }
 
 //ADD Implementation to see full recipe
