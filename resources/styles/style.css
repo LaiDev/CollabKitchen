@@ -71,7 +71,8 @@ header,
     width: 100%;
 
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     gap: 20px;
     padding: 10px;
 }
@@ -79,16 +80,24 @@ header,
 {
     border: 2px black solid;
     width: 25%;
+    max-width: 500px;
     height: 150px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: scroll;
+    padding: 10px 10px;
+    
 }
 
 .sample-recipe-name
 {
 font-size: 1.5rem;
+height: 58px;
+text-align: center;
+display: flex;
+align-items: center;
 }
 
 #recipe-creation-form
