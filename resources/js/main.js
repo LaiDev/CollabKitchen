@@ -17,6 +17,7 @@ const ingredientBtn = document.getElementById("addIngredientBtn");
 const ingredientList = document.getElementById("ingredentList");
 const ingredientArr = [];
 
+if(ingredientBtn != null){
 ingredientBtn.addEventListener("click", () => {
     event.preventDefault();
     if(ingredientField.value != "")
@@ -30,12 +31,15 @@ ingredientBtn.addEventListener("click", () => {
     }
 
 })
+}
 
 //Listens for when adding a step, and displays it in the form
 const directionField = document.getElementById("directions");
 const directionBtn = document.getElementById("addDirectionsBtn");
 const directionList = document.getElementById("directionsList");
 const directionArr = [];
+
+if(directionBtn != null){
 
 directionBtn.addEventListener("click", () => {
     event.preventDefault();
@@ -48,13 +52,16 @@ directionBtn.addEventListener("click", () => {
     directionField.value = "";
     }
 })
+}
 
 //Display Recipes
+
+const UserRecipes = document.getElementById("users-recipes");
 
 const displayRecipeSample = (recipeName, recipeAuthor, recipe ) => {
     const container = document.createElement("div");
     container.classList.add("recipeContainer")
-    document.body.append(container)
+    UserRecipes.append(container)
 
     const sampleImg = document.createElement("div");
     sampleImg.classList.add("sampleRecipeImg")
@@ -102,6 +109,8 @@ const servingSize = document.getElementById("servingSize");
 
 //Gets all the information from the form fields and passes it into the createRecipe class to create a new recipe Object
 const createRecipeBtn = document.getElementById("createRecipe");
+
+if(createRecipeBtn != null){
 createRecipeBtn.addEventListener("click", () => {
     event.preventDefault();
     console.log(recipeName.value);
@@ -114,7 +123,7 @@ createRecipeBtn.addEventListener("click", () => {
     //displayRecipeSample(recipe.recipeName,recipe.recipeAuthor, recipe);
 
 })
-
+}
 
 //Retrieve recipe From Local Storage and Display on DOM
 
@@ -125,6 +134,19 @@ const loadFromStorage = () => {
    })
 }
 
-loadFromStorage()
+const emptyStorageMessge = document.getElementById("empty-storage-message");
+//If local storage is empty, display "There's nothing here. Otherwise render data from storage"
+const handleHomePageContent = () => {
+    if(localStorage.length != 0)
+    {
+        emptyStorageMessge.style.display = "none";
+        loadFromStorage();
+    }
+
+
+
+}
 
 //ADD Implementation to see full recipe
+
+handleHomePageContent();
