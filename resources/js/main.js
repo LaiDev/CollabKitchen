@@ -94,7 +94,6 @@ const generateId = () => {
    return id;
 }
 
-
 //ADD recipe To Local Storage
 
 const addToLocalStorage = (recipeToAdd) => {
@@ -142,6 +141,8 @@ const handleHomePageContent = () => {
         emptyStorageMessge.style.display = "none";
         loadFromStorage();
     }
+
+    UserRecipes.style.display = "none";
 
 
 
