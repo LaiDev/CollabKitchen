@@ -150,7 +150,7 @@ const homeCreateBtn = document.getElementById("home-create-btn");
 if(homeCreateBtn != null)
 {
     homeCreateBtn.addEventListener("click", () => {
-        window.location.href = "index.html";
+        window.location.href = "createRecipe.html";
     } )
 }
 
