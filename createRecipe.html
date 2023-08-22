@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CollabKitchen</title>
+    <link rel="stylesheet" href="./resources/styles/style.css">
+    <script type="module" src="./resources/js/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <span id = "brand">CollabKitchen</span>
+            <ul class="nav-links">
+                <li><a href="./home.html" class = "nav-link">Home</a></li>
+                <li><a href="" class = "nav-link">Explore</a></li>
+                <li><a href="./createRecipe.html" class = "nav-link" id = "create-recipe-btn">Create</a></li>
+                <button id = "clear-storage-btn">Clear Storage</button>
+            </ul>
+        </nav>
+    </header>
+    <main class = "wrapper">
+    <form id = "recipe-creation-form">
+        <label for="recipeName">Recipe Name:</label>
+        <input type="text" name = "recipeName" id = "recipeName" maxlength="55" required>
+        <br>
+        <label for="recipeName">Recipe Author:</label>
+        <input type="text" name = "recipeAuthor" id = "recipeAuthor" required>
+        <br>
+        <label for="cookTime">Cook Time (mins):</label>
+        <input type="number" name="cookTime" id="cookTime" required>
+        <br>
+        <label for="servingSize">Serving Size:</label>
+        <input type="number" name="servingSize" id="servingSize" required>
+        <br>
+        <label for="ingredients">Ingredients:</label>
+        <input type="text" name="ingredients" id="ingredients" >
+        <ul id = "ingredentList"></ul>
+        <button id = "addIngredientBtn">Add Ingredient</button>
+        <br>
+        <label for="directions">Directions:</label>
+        <input type="text" name="directions" id="directions" >
+        <ol id = "directionsList"></ol>
+        <button id = "addDirectionsBtn">Add Directions</button>
+        <br>
+        <button type="submit" id = "createRecipe">Create Recipe</input>
+    </form>
+</main>
+
+</body>
+</html>

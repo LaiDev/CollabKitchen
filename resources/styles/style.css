@@ -1,4 +1,149 @@
 body
 {
-    background-color: cadetblue;
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+}
+nav
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#brand
+{
+    font-size: 2rem;
+}
+
+.nav-links li
+{
+list-style-type: none;
+}
+
+a
+{
+    text-decoration: none;
+    color: black;
+}
+
+.nav-link
+{
+    font-size: 1.2rem;
+}
+
+header,
+.wrapper
+{
+    margin: 0px 10px;
+}
+
+.nav-links
+{
+    display: flex;
+    gap: 20px;
+}
+
+.wrapper
+{
+    border: 2px black solid;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#home-message
+{
+    font-size: 1.2rem;
+}
+#home-create-btn
+{
+    width: 100%;
+    padding: 10px;
+    border: none;
+}
+
+#users-recipes
+{
+    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 10px;
+    padding: 20px;
+    justify-content: center;
+}
+.recipe-container
+{
+    border: 2px black solid;
+    width: 25%;
+    max-width: 500px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: scroll;
+    padding: 10px 10px;
+    
+}
+
+.sample-recipe-name
+{
+font-size: 1.5rem;
+height: 58px;
+text-align: center;
+display: flex;
+align-items: center;
+}
+
+#recipe-creation-form
+{
+    background-color: rgb(243, 176, 130);
+    padding: 10px;
+    border-radius: 8px;
+    max-height: 85vh;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0px;
+}
+
+#recipe-creation-form label
+{
+    font-size: 1.2rem;
+}
+
+#recipe-creation-form input
+{
+    padding: 8px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+#recipe-creation-form button
+{
+    padding: 10px;
+}
+
+#ingredentList, 
+#directionsList
+{
+    border: 2px black solid;
+    height: 200px;
+    overflow: scroll;
+}
+
+.direction-list-item,
+.ingredient-list-item
+{
+font-size: 1.2rem;
+}
+
+.test
+{
+    display: none;
 }
