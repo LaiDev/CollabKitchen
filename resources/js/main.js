@@ -133,7 +133,12 @@ createRecipeForm.addEventListener("submit", () => {
    })
 }
 
-
+//Handles clearing the users local storage
+const clearStorageBtn = document.getElementById("clear-storage-btn");
+clearStorageBtn.addEventListener("click", () => {
+    localStorage.clear();
+    window.location.reload();
+})
 
 //ADD Implementation to see full recipe
 
