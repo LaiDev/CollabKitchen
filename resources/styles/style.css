@@ -1,7 +1,4 @@
-body
-{
-    background-color: cadetblue;
-}
+
 nav
 {
     display: flex;
@@ -32,3 +29,19 @@ header,
     gap: 20px;
 }
 
+.wrapper
+{
+    border: 2px black solid;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#homeCreateBtn
+{
+    width: 100%;
+    padding: 10px;
+    border: none;
+}
