@@ -60,26 +60,26 @@ const UserRecipes = document.getElementById("users-recipes");
 
 const displayRecipeSample = (recipeName, recipeAuthor, recipe ) => {
     const container = document.createElement("div");
-    container.classList.add("recipeContainer")
+    container.classList.add("recipe-container")
     UserRecipes.append(container)
 
     const sampleImg = document.createElement("div");
-    sampleImg.classList.add("sampleRecipeImg")
+    sampleImg.classList.add("sample-recipe-img")
     container.append(sampleImg);
 
     const sampleTitle = document.createElement("h1");
     sampleTitle.innerHTML = recipeName;
-    sampleTitle.classList.add("sampleRecipeName");
+    sampleTitle.classList.add("sample-recipe-name");
     container.append(sampleTitle);
 
     const sampleRecipeAuthor = document.createElement("h2");
     sampleRecipeAuthor.innerHTML = recipeAuthor;
-    sampleRecipeAuthor.classList.add("sampleRecipeAuthor");
+    sampleRecipeAuthor.classList.add("sample-recipe-author");
     container.append(sampleRecipeAuthor);
 
     const seeRecipeBtn = document.createElement("button");
     seeRecipeBtn.innerHTML = "See Recipe"
-    seeRecipeBtn.classList.add("seeRecipeBtn");
+    seeRecipeBtn.classList.add("see-recipe-btn");
     container.append(seeRecipeBtn);
 
     //Displays full recipe info when clicking the specific button
