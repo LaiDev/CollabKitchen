@@ -21,7 +21,7 @@ nav
 
 #brand
 {
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 .nav-links li
@@ -37,7 +37,27 @@ a
 
 .nav-link
 {
-    font-size: 1.2rem;
+    font-size: 2rem;
+}
+
+button
+{
+    font-size: 2rem;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    border: 3.5px solid #172554;
+    color: #172554;
+    font-weight: bold;
+    background-color: white;
+}
+
+#home-create-btn
+{
+    background-color: #172554;
+    box-shadow: 6px 5px 0px #6dd1cf;
+    color: white;
+    padding: 10px 50px;
 }
 
 header,
@@ -66,12 +86,13 @@ header,
 
 .home-message
 {
-    font-size: 1.2rem;
+    font-size: 2rem;
+    text-align: center;
 }
 #home-create-btn
 {
     width: 100%;
-    padding: 10px;
+
     border: none;
 }
 
