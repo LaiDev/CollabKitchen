@@ -1,0 +1,18 @@
+@media (max-width: 768px) { 
+    .recipe-container
+    {
+        width: 45%;
+    }
+
+    nav
+    {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 420px) {
+    .recipe-container
+    {
+        width: 90%;
+    }
+}

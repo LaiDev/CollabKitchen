@@ -159,11 +159,6 @@ font-size: 1.2rem;
 
 
 @media (max-width: 768px) { 
-    .recipe-container
-    {
-        width: 45%;
-    }
-
     nav
     {
         flex-direction: column;
@@ -171,8 +166,5 @@ font-size: 1.2rem;
 }
 
 @media (max-width: 420px) {
-    .recipe-container
-    {
-        width: 90%;
-    }
+   
 }
