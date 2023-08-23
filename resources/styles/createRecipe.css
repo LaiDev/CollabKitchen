@@ -1,8 +1,16 @@
 @media (max-width: 768px) { 
    #recipe-creation-form
    {
+    border: #172554 3px solid;
     width: 70%;
    }
+
+   #recipe-creation-form input
+{
+    border: #172554 2px solid;
+}
+
+
 }
 
 @media (max-width: 420px) {

@@ -132,7 +132,8 @@ align-items: center;
 
 #recipe-creation-form
 {
-    background-color: rgb(243, 176, 130);
+    background-color: rgb(255, 255, 255);
+    border: #172554 4px solid;
     padding: 10px;
     border-radius: 8px;
     max-height: 85vh;
@@ -144,13 +145,13 @@ align-items: center;
 
 #recipe-creation-form label
 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 #recipe-creation-form input
 {
     padding: 8px 0;
-    border: none;
+    border: #172554 3px solid;
     border-radius: 5px;
 }
 
@@ -184,8 +185,23 @@ font-size: 1.2rem;
     {
         flex-direction: column;
     }
+
+    .nav-link
+    {
+    font-size: 1.75rem;
+    }
+
+    button
+    {
+        font-size: 1.75rem;
+        padding: 5px;
+        border: 3.5px solid #172554;
+    }
 }
 
 @media (max-width: 420px) {
-   
+    .nav-link
+    {
+    font-size: 1.5rem;
+    }
 }
