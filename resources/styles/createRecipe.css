@@ -1,0 +1,13 @@
+@media (max-width: 768px) { 
+   #recipe-creation-form
+   {
+    width: 70%;
+   }
+}
+
+@media (max-width: 420px) {
+    #recipe-creation-form
+   {
+    width: 90%;
+   }
+}

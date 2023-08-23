@@ -4,10 +4,6 @@
         width: 45%;
     }
 
-    nav
-    {
-        flex-direction: column;
-    }
 }
 
 @media (max-width: 420px) {
