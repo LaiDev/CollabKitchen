@@ -6,8 +6,11 @@ const emptyStorageMessge = document.getElementById("empty-storage-message");
 const handleHomePageContent = () => {
     if(localStorage.length != 0)
     {
-        emptyStorageMessge.classList.add("test");
-        loadFromStorage();
+        if(emptyStorageMessge != null)
+        {
+            emptyStorageMessge.classList.add("test");
+            loadFromStorage();
+        }
     }
     if(UserRecipes != null){
     UserRecipes.classList.add("test")}
