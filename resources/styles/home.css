@@ -1,0 +1,14 @@
+@media (max-width: 768px) { 
+    .recipe-container
+    {
+        width: 45%;
+    }
+
+}
+
+@media (max-width: 420px) {
+    .recipe-container
+    {
+        width: 90%;
+    }
+}
