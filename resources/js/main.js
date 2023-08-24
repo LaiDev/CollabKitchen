@@ -21,6 +21,9 @@ directionBtn.addEventListener("click", () => {
     })
 }
 
+const ingredientsDisplay = document.getElementById("ingredentList");
+const directionssDisplay = document.getElementById("directionsList");
+
 //Creates a new Recipe Obj when submitting the form
 const createRecipeForm = document.getElementById("recipe-creation-form");
 if(createRecipeForm != null){
@@ -28,6 +31,8 @@ createRecipeForm.addEventListener("submit", () => {
     event.preventDefault();
     createRecipeObj(); 
     createRecipeForm.reset();   
+    ingredientsDisplay.innerHTML = " ";
+    directionssDisplay.innerHTML = " ";
 })
 }
 

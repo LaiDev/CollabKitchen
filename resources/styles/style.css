@@ -145,7 +145,7 @@ align-items: center;
 
 #recipe-creation-form label
 {
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 #recipe-creation-form input
@@ -153,6 +153,7 @@ align-items: center;
     padding: 8px 0;
     border: #172554 3px solid;
     border-radius: 5px;
+    font-size: 1.75rem;
 }
 
 #recipe-creation-form button
@@ -171,7 +172,7 @@ align-items: center;
 .direction-list-item,
 .ingredient-list-item
 {
-font-size: 1.2rem;
+font-size: 2rem;
 }
 
 .test
