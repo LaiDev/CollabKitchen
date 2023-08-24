@@ -1,4 +1,6 @@
-import { UserRecipes } from "./home.js";
+import { UserRecipes, clearHomePage, loadFullRecipe } from "./home.js";
+
+const wrapper = document.querySelector(".wrapper");
 
 const displayRecipeSample = (recipeName, recipeAuthor, recipe ) => {
     const container = document.createElement("div");
@@ -24,9 +26,12 @@ const displayRecipeSample = (recipeName, recipeAuthor, recipe ) => {
     seeRecipeBtn.classList.add("see-recipe-btn");
     container.append(seeRecipeBtn);
 
+    
     //Displays full recipe info when clicking the specific button
     seeRecipeBtn.addEventListener("click", () => {
-        console.log(recipe);
+        clearHomePage();
+        loadFullRecipe(recipe.recipeAuthor, recipe.recipeName, recipe.cookTime, recipe.servingSize, recipe.ingredientsArr, recipe.directionsArr );
+        wrapper.classList.add("recipes-wrapper");
     })
 
 }
