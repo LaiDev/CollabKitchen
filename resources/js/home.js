@@ -7,16 +7,28 @@ const emptyStorageMessge = document.getElementById("empty-storage-message");
 const handleHomePageContent = () => {
 
     wrapper.classList.remove("recipes-wrapper");
+
     if(localStorage.length != 0)
     {
-        if(emptyStorageMessge != null)
-        {
-            emptyStorageMessge.classList.add("test");
-            loadFromStorage();
+        if(emptyStorageMessge != null){   
+        emptyStorageMessge.classList.add("hideMessage");
+        loadFromStorage();
         }
+        /* if(emptyStorageMessge != null)
+        {
+            emptyStorageMessge.classList.add("showMessage");
+            loadFromStorage();
+        } */
+    } 
+    else
+    {
+        if(emptyStorageMessge != null){  
+        emptyStorageMessge.classList.remove("hideMessage");
     }
-    if(UserRecipes != null){
-    UserRecipes.classList.add("test")}
+}
+   /*  if(UserRecipes != null){
+    UserRecipes.classList.add("showMessage")
+    } */
 }
 
 const homeCreateBtn = document.getElementById("home-create-btn");
