@@ -14,7 +14,7 @@ Live Site : [Mix&Munch](https://mixnandmunch.netlify.app/)
 - CSS
 - JavaScript
 - Figma
-- 
+  
 ### 📌 - Future Goals
 - Implement Firebase/Supabase to store recipes in a online database
 - Allow users to share their saved recipes
